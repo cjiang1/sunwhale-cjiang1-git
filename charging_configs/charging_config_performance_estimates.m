@@ -61,8 +61,12 @@ end
 
 % -- Plot --
 
-figure();
-scatter3(x_nConc, y_percentShaded, z_deltaSpeed);
+figure
+scatter3(x_nConc, y_percentShaded, z_deltaSpeed)
+title('Speed gains vs. charging configuration')
+xlabel('# of concentrators')
+ylabel('Percent shaded')
+zlabel('Delta speed w.r.t Luminos')
 
 
 
