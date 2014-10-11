@@ -60,16 +60,27 @@ for nConc = 15:25:115
     end
 end
 
-%% -- Plot --
+%% -- Plot scatter --
 
-%figure
-%scatter3(x_nConc, y_percentShaded, z_deltaSpeed)
-%title('Speed gains vs. charging configuration')
-%xlabel('# of concentrators')
-%ylabel('Percent shaded')
-%zlabel('Delta speed w.r.t Luminos')
+figure
+scatter3(x_nConc, y_percentShaded, z_deltaSpeed)
+title('Speed gains vs. charging configuration')
+xlabel('# of concentrators')
+ylabel('Percent shaded')
+zlabel('Delta speed w.r.t Luminos')
 
+%% -- Plot surface --
 
+x_nConc_surf = 15:25:115;
+y_shaded_surf = 0:13.75:41.25;
+z_deltaSpeed_surf = reshape(z_deltaSpeed,[4,5])
+
+figure
+surf(x_nConc_surf, y_shaded_surf, z_deltaSpeed_surf)
+title('Speed gain vs. charging config (surface plot)')
+xlabel('# concentrators')
+ylabel('Percent shaded')
+zlabel('Delta speed (w.r.t Luminos)')
 
 
 
