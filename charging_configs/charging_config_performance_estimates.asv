@@ -60,14 +60,16 @@ for nConc = 15:25:115
     end
 end
 
-%% -- Plot --
+%% -- Plot scatter --
 
-%figure
-%scatter3(x_nConc, y_percentShaded, z_deltaSpeed)
-%title('Speed gains vs. charging configuration')
-%xlabel('# of concentrators')
-%ylabel('Percent shaded')
-%zlabel('Delta speed w.r.t Luminos')
+figure
+scatter3(x_nConc, y_percentShaded, z_deltaSpeed)
+title('Speed gains vs. charging configuration')
+xlabel('# of concentrators')
+ylabel('Percent shaded')
+zlabel('Delta speed w.r.t Luminos')
+
+%% -- Plot surface --
 
 
 
